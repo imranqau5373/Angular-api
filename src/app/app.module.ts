@@ -3,10 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CreateCourtComponent } from './sportscourt/create-court/create-court.component';
+import { ListCourtComponent } from './sportscourt/list-court/list-court.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreateCourtComponent,
+    ListCourtComponent
   ],
   imports: [
     BrowserModule,

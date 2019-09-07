@@ -1,0 +1,91 @@
+{% macro meta() %}
+    <meta charset="UTF-8">
+    <title>BFN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link href="layout/css/font-awesome.css" rel="stylesheet">
+    <link href="layout/css/simple-line-icons.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="layout/css/remodal.css">
+    <link rel="stylesheet" type="text/css" href="layout/css/style.css">
+{% endmacro %}
+
+{% macro header() %}
+<header class="app-header navbar">
+    <button class="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button">☰</button>
+    <a class="navbar-brand" href="#"></a>      
+	<ul class="nav navbar-nav ml-auto">
+		<!-- <li class="nav-item dropdown">
+            <a class="nav-link" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-bell"></i>
+				<span class="badge badge-pill badge-danger">2</span>
+			</a>
+			<ul class="dropdown-menu dropdown-menu-right notification-menu">	
+				<li class="dropdown-item"><a href="notifications.html">Netto Rådhuspladsen requests attachment to Netto A/S</a></li>
+				<li class="dropdown-item"><a href="notifications.html">Kvickly Nexø added to Kvickly</a></li>
+				<li class="dropdown-item"><a href="notifications.html">View all</a></li>
+				
+			</ul>
+		</li> -->
+		<li class="nav-item pl-2 pr-4 dropdown d-none d-md-block">
+			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+			  <span class="d-md-down-none">Super Admin</span>
+			</a>
+			<div class="dropdown-menu dropdown-menu-right">	
+				<!-- <a class="dropdown-item" href="profile.html"><i class="icon-user"></i> Profile</a> -->
+				<a class="dropdown-item" href="index.html"><i class="icon-logout"></i> Logout</a>
+			</div>
+		</li>
+    </ul> 
+</header>
+{% endmacro %}
+
+{% macro filter(includeSearch='true',includeList='false') %}
+    <ul class="dropdown-menu filter">
+		<li class="dropdown-item"><a href="#add-admin"><i class="fa fa-sort-amount-asc"></i> Sort ascending</a></li>
+		<li class="dropdown-item"><a href="#"><i class="fa fa-sort-amount-desc"></i> Sort descending</a></li>
+		
+		{% if includeSearch %}
+		<li class="dropdown-item disabled"><a href="#add-admin"><i class="icon-ban"></i> Clear filters</a></li>
+		<li class="dropdown-item">
+			<label>Search</label>
+			<div class="input-group form-group mb-0">
+				<input type="text" class="form-control">
+				<button class="input-group-addon"><i class="icon-magnifier"></i></button>
+			</div>
+		</li>
+		{% endif %}
+		
+		{% if not includeList %}
+		<li class="dropdown-item">
+			<label>Filter</label>
+			<ul class="list-group">
+				<li class="list-group-item"><div class="form-check">
+				  <label class="form-check-label">
+					<input class="form-check-input" type="checkbox" value="">Select all
+				  </label>
+				</div></li>
+				<li class="list-group-item"><div class="form-check">
+				  <label class="form-check-label">
+					<input class="form-check-input" type="checkbox" value="">Chain Admin
+				  </label>
+				</div></li>
+				<li class="list-group-item"><div class="form-check">
+				  <label class="form-check-label">
+					<input class="form-check-input" type="checkbox" value="">Company Admin
+				  </label>
+				</div></li>
+				<li class="list-group-item"><div class="form-check">
+				  <label class="form-check-label">
+					<input class="form-check-input" type="checkbox" value="">Shop Admin
+				  </label>
+				</div></li>
+				<li class="list-group-item"><div class="form-check">
+				  <label class="form-check-label">
+					<input class="form-check-input" type="checkbox" value="">Contact Person
+				  </label>
+				</div></li>
+			</ul>
+		</li>
+		{% endif %}
+		
+	</ul>
+{% endmacro %}

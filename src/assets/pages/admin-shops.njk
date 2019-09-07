@@ -1,0 +1,235 @@
+<!-- admin-shops.njk -->
+{% extends "templates/layout.njk" %}
+
+
+{% block meta %}
+    {{ g.meta() }}
+{% endblock %}
+
+{% block content %}
+	
+	<!-- Breadcrumb -->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item active">Shops</li>
+    </ol>
+	
+	<div class="container-fluid">
+        <div class="animated fadeIn">
+                    <div class="row">						
+						<div class="col-sm-12">	
+							<!-- Shops Details -->							
+								<div class="card">	
+									<div class="card-header">
+										<strong>Shops</strong>
+										
+										<a href="admin-shop-add.html" class="btn btn-primary float-right"><i class="icon-plus"></i> Add new shop</a>
+										
+									</div>
+									<div class="card-block">
+										
+										<table class="table table-bordered table-striped"  data-toggle="table">
+											<thead>
+												<tr>
+													<th>
+														<div class="dropdown">
+															<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-filter"></i> BFN number</a>
+															{{ g.filter() }}	
+														</div>
+													</th>
+													<th>
+														<div class="dropdown">
+															<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-filter"></i> Shop name</a>
+															{{ g.filter() }}	
+														</div>
+													</th>
+													<th data-breakpoints="xs sm">
+														<div class="dropdown">
+															<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-filter"></i> Address</a>
+															{{ g.filter() }}	
+														</div>
+													</th>
+													<th data-breakpoints="xs">
+														<div class="dropdown">
+															<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-filter"></i> Company</a>
+															{{ g.filter() }}	
+														</div>
+													</th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>987654321</td>
+													<td>Netto Rådhuspladsen</td>
+													<td>Vestergade 39, 1456 Copenhagen K</td>
+													<td>Netto</td>
+													<td class="text-center">
+														<a href="admin-shop-view.html"><i class="icon-eye" title="View details"></i></a>
+														<a href="#view-oh"><i class="icon-event" title="View Opening hours"></i></a>
+													</td>
+												</tr>
+												
+												<tr>
+													<td>987654322</td>
+													<td>Netto Jarmers Plads</td>
+													<td>Jarmers Plads 7, 1551 Copenhagen V</td>
+													<td>Netto</td>
+													<td class="text-center">
+														<a href="admin-shop-view.html"><i class="icon-eye" title="View details"></i></a>
+														<a href="#view-oh"><i class="icon-event" title="View Opening hours"></i></a>
+													</td>
+												</tr>
+												
+												<tr>
+													<td>987654323</td>
+													<td>Netto Vesterbrogade</td>
+													<td>Vesterbrogade 8, 1620 Copenhagen V</td>
+													<td>Netto</td>
+													<td class="text-center">
+														<a href="admin-shop-view.html"><i class="icon-eye" title="View details"></i></a>
+														<a href="#view-oh"><i class="icon-event" title="View Opening hours"></i></a>
+													</td>
+												</tr>
+												
+												<tr>
+													<td>842000313</td>
+													<td>Kvickly Nexø</td>
+													<td>Købmagergade 12, Postbox 123, 3730 Nexø</td>
+													<td>Kvickly</td>
+													<td class="text-center">
+														<a href="admin-shop-view.html"><i class="icon-eye" title="View details"></i></a>
+														<a href="#view-oh"><i class="icon-event" title="View Opening hours"></i></a>
+													</td>
+												</tr>
+												
+												<tr>
+													<td>842000315</td>
+													<td>Kvickly Frederiksberg</td>
+													<td>Falconer All 90 - 94, 2000 Frederiksberg </td>
+													<td>Kvickly</td>
+													<td class="text-center">
+														<a href="admin-shop-view.html"><i class="icon-eye" title="View details"></i></a>
+														<a href="#view-oh"><i class="icon-event" title="View Opening hours"></i></a>
+													</td>
+												</tr>
+												
+											</tbody>
+										</table>
+										<nav class="table-pagination">
+											<ul class="pagination">
+												<li class="page-item disabled"><a class="page-link" href="#">Prev</a>
+												</li>
+												<li class="page-item active">
+													<a class="page-link" href="#">1</a>
+												</li>
+												<li class="page-item disabled"><a class="page-link" href="#">Next</a>
+												</li>
+											</ul>
+											<div class="result-summary"><span id="current-start">1</span> to <span id="current-end">5</span> of <span id="total-result">5</span>results.</div>
+										</nav>
+									</div>
+									<!--  -->										
+								</div>
+							</div>
+							<!-- Shops Details ends -->
+							
+					<!--  -->
+                    </div>
+                </div>      
+	</div>
+    <!-- /.conainer -->
+	
+	<!-- View Modal start -->
+	<div class="remodal" data-remodal-id="view-oh" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+	  <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+	  <div class="remodal-header">
+			<div class="card-block"><h4>Summer Template <small class="text-muted">[Active]</small></h4></div>
+	  </div>
+	  <div class="remodal-content">
+			
+			<!-- Opening hours Tab -->
+				<div class="card-block">
+					<div class="col-sm-12 nopadding">
+						
+						<div class="form-group">
+							<label>Description</label>
+							<h4>Template for Summer time working hours.</h4>
+						</div>
+					</div>
+					<div class="col-sm-6 nopadding">
+						<div class="form-group">
+							<label for="season-start">Seasonal schedule starts from</label>
+							<h4>24 June</h4>
+						</div>
+					</div>
+					<div class="col-sm-6 ">
+						<div class="form-group">
+							<label for="season-end">Seasonal schedule ends at</label>
+							<h4>09 August</h4>
+						</div>
+					</div>
+					
+					<div>
+						<div class="input-group">
+							<span class="input-group-addon">Day</span>
+							<input type="text" id="oh-monday" name="input3-group1" class="form-control" placeholder="Opening Hour" disabled>
+							<span class="input-group-addon">:</span>
+							<input type="text" id="ch-monday" name="input3-group1" class="form-control" placeholder="Closing Hour" disabled>
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon">Mon</span>
+							<input type="time" id="oh-monday" name="input3-group1" class="form-control" value="09:00:00" disabled>
+							<span class="input-group-addon">:</span>
+							<input type="time" id="ch-monday" name="input3-group1" class="form-control" value="18:00:00" disabled>
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon">Tue</span>
+							<input type="time" id="oh-monday" name="input3-group1" class="form-control" value="09:00:00" disabled>
+							<span class="input-group-addon">:</span>
+							<input type="time" id="ch-monday" name="input3-group1" class="form-control" value="18:00:00" disabled>
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon">Wed</span>
+							<input type="time" id="oh-monday" name="input3-group1" class="form-control" value="09:00:00" disabled>
+							<span class="input-group-addon">:</span>
+							<input type="time" id="ch-monday" name="input3-group1" class="form-control" value="18:00:00" disabled>
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon">Thu</span>
+							<input type="time" id="oh-monday" name="input3-group1" class="form-control" value="09:00:00" disabled>
+							<span class="input-group-addon">:</span>
+							<input type="time" id="ch-monday" name="input3-group1" class="form-control" value="18:00:00" disabled>
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon">Fri</span>
+							<input type="time" id="oh-monday" name="input3-group1" class="form-control" value="09:00:00" disabled>
+							<span class="input-group-addon">:</span>
+							<input type="time" id="ch-monday" name="input3-group1" class="form-control" value="18:00:00" disabled>
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon">Sat</span>
+							<input type="time" id="oh-monday" name="input3-group1" class="form-control" value="09:00:00" disabled>
+							<span class="input-group-addon">:</span>
+							<input type="time" id="ch-monday" name="input3-group1" class="form-control" value="18:00:00" disabled>
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon">Sun</span>
+							<input type="time" id="oh-monday" name="input3-group1" class="form-control" value="-" disabled>
+							<span class="input-group-addon">:</span>
+							<input type="time" id="ch-monday" name="input3-group1" class="form-control" value="-" disabled>
+						</div>
+						
+					</div>
+					
+				</div>
+			<!-- Opening Hours Tab ends -->
+			
+	  </div>
+	  
+	  
+	</div>
+	<!-- View Modal End -->
+    
+{% endblock %}
+<!-- end index.njk -->

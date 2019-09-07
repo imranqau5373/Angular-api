@@ -1,0 +1,223 @@
+<!-- admin-company-add.njk -->
+{% extends "templates/layout.njk" %}
+
+
+{% block meta %}
+    {{ g.meta() }}
+{% endblock %}
+
+{% block content %}
+	
+	<!-- Breadcrumb -->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item"><a href="admin-chains.html">Chains</a></li>
+        <li class="breadcrumb-item active">Add new chain</li>
+    </ol>
+	
+	<div class="container-fluid">
+        <div class="animated fadeIn">
+                    <div class="row">
+						
+						<div class="col-sm-12">
+						
+							<!-- Wizard tabs start
+							<ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item active">
+                                    <a class="nav-link " data-toggle="tab" data-target="#company" role="tab" aria-controls="company">Chain information</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" data-target="#admin" role="tab" aria-controls="admin">Chain admins</a>
+                                </li>
+                            </ul>
+							 -->
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="company" role="tabpanel">
+									<div class="col-sm-12 nopadding">
+										<div class="card">
+											<div class="card-block col-md-6">	
+												<div class="form-group">
+													<label for="cvr">CVR Number</label>
+													<div class="input-group">
+														<input type="text" id="cvr" placeholder="Enter CVR number to verify"  class="form-control">
+														<button class="btn btn-sm btn-primary">Verify CVR nr.</button>
+													</div>
+													<small class="form-text text-muted text-danger">The CVR number is not correct. Please try again!</small>
+												</div>
+												
+												<div class="form-group">
+													<label for="chain-name">Chain Name</label>
+													<input type="text" class="form-control" id="chain-name" placeholder="Enter Chain Name">
+												</div>
+
+												<div class="form-group">
+													<label for="chain-address">Address</label>
+													<input type="text" class="form-control" id="chain-address" placeholder="Enter full address">
+												</div>
+
+												<div class="form-group">
+													<label for="bank-account-nr">Bank Account Nr.</label>
+													<span class="badge badge-default badge-pill float-right">Optional</span>
+													<input type="text" id="bank-account-nr" placeholder="Enter account number" class="form-control">
+												</div>
+												
+												<div class="form-group">
+													<label for="chain-email-address">Email Address</label>
+													<input type="email" class="form-control" id="chain-email-address" placeholder="Enter email address for invoicing">
+												</div> 
+												
+												
+											</div>
+											<div class="card-footer">
+												<button type="submit" class="btn btn-sm btn-primary float-right">Next</button>
+											</div>
+										</div>
+									</div>
+                                </div>
+								<div class="tab-pane" id="admin" role="tabpanel">
+									<div class="col-sm-12 nopadding">
+										<div class="card">
+											<div class="card-block">
+												<button class="btn btn-outline-primary mb-2 float-right" data-remodal-target="add-admin"><i class="icon-plus"></i> Add chain admin</button>
+												<table class="table table-bordered table-striped"  data-toggle="table">
+													<thead>
+														<tr>
+															<th>Name</th>
+															<th data-breakpoints="xs">Address</th>
+															<th data-breakpoints="xs sm">Contact No.</th>
+															<th data-breakpoints="xs sm">Email</th>
+															<th></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Michael Erhardt</td>
+															<td>Jarmers Plads 15, 1551 Copenhagen V</td>
+															<td>43 23 43 03</td>
+															<td>michael.erhardt@domain.dk</td>
+															<td class="text-center">
+																<div class="dropdown">
+																	<i class="icon-options-vertical"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+																	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+																		<a class="dropdown-item" href="#">Deactivate user</a>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>Daniel Odvig</td>
+															<td>Jarmers Plads 55, 1551 Copenhagen V</td>
+															<td>43 99 51 22</td>
+															<td>daniel.odvig@domain.dk</td>
+															<td class="text-center">
+																<div class="dropdown">
+																	<i class="icon-options-vertical"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+																	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+																		<a class="dropdown-item" href="#">Deactivate user</a>
+																	</div>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<td>Tina Møller</td>
+															<td>Vesterbrogade 12, 1620 Copenhagen V</td>
+															<td>43 10 88 77</td>
+															<td>tina.møller@domain.dk</td>
+															<td class="text-center">
+																<div class="dropdown">
+																	<i class="icon-options-vertical"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+																	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+																		<a class="dropdown-item" href="#">Deactivate user</a>
+																	</div>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<nav>
+													<ul class="pagination">
+														<li class="page-item disabled"><a class="page-link" href="#">Prev</a>
+														</li>
+														<li class="page-item active">
+															<a class="page-link" href="#">1</a>
+														</li>
+														<li class="page-item disabled"><a class="page-link" href="#">Next</a>
+														</li>
+													</ul>
+												</nav>
+											</div>
+											<div class="card-footer">
+												<button type="submit" class="btn btn-sm btn-primary float-right">Save</button>
+											</div>
+										</div>
+									</div>
+								</div>
+                            </div>
+							<!-- Wizard tabs ends -->
+                        </div>
+                    </div>
+                </div>     
+	</div>
+    <!-- /.conainer -->
+	
+	<!-- Add/Edit Modal start -->
+	<div class="remodal" data-remodal-id="add-admin" role="dialog" aria-labelledby="add-admin">
+	  <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+	  <div class="remodal-header">
+			<div class="card-block"><h1>Add chain admin</h1></div>
+	  </div>
+	  <div class="remodal-content">
+			
+			<!-- Opening hours Tab -->
+					<div class="card-block">						
+						<div class="col-sm-12 nopadding">
+							<div class="form-group">
+								<label>Name</label>
+								<input type="text" class="form-control" placeholder="Enter full name">
+							</div>
+							
+							<div class="form-group">
+								<label>Address</label>
+								<input type="text" class="form-control" placeholder="Enter full address">
+							</div>
+							
+							<div class="form-group">
+								<label>Contact No.</label>
+								<input type="text" class="form-control" placeholder="Enter contact number">
+							</div>
+							
+							<div class="form-group">
+								<label>Email</label>
+								<input type="text" class="form-control" placeholder="Enter email address">
+							</div>
+							
+							<div class="form-group">
+								<label>Expertise</label>
+								<select class="form-control">
+									<option selected disabled>Choose expertise</option>
+									<option>Human Resource</option>
+									<option>Account & Finance</option>
+									<option>Information Technology</option>
+									<option>Business Management</option>
+								</select>
+							</div>
+							
+						</div>
+						
+					</div>
+				
+			<!-- Opening Hours Tab ends -->
+			
+	  </div>
+	  
+	  <div class="remodal-footer">
+		<div class="card-block">
+			<button data-remodal-action="confirm" class="btn btn-primary">Save</button>
+		</div>
+	  </div>
+	  
+	</div>
+	<!-- Add/Edit Modal End -->
+    
+{% endblock %}
+

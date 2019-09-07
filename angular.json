@@ -24,9 +24,21 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/layout/css/font-awesome.css",
+              "src/assets/layout/css/simple-line-icons.css",
+              "src/assets/layout/css/remodal.css",
+              "src/assets/layout/css/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/layout/js/vendor/jquery-3.2.1.min.js",
+              "src/assets/layout/js/vendor/popper.min.js",
+              "src/assets/layout/js/vendor/bootstrap.min.js",
+              "src/assets/layout/js/vendor/app.js",
+              "src/assets/layout/js/vendor/FooTable.js",
+              "src/assets/layout/js/vendor/remodal.js"
+              
+            ]
           },
           "configurations": {
             "production": {

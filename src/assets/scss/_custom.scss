@@ -1,0 +1,509 @@
+.app{
+	background: $gray-shine;
+}
+
+.sidebar{ 
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: #fff;
+	border-right: 1px solid #ccc;
+	
+	.sidebar-nav{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	.nav{
+		.nav-item {
+			cursor: pointer;
+			
+			&.active{
+				background: $brand-primary;
+	
+				a{
+					color: #fff !important;
+				}
+			}
+			
+			.nav-link{	
+				color: $gray;
+				&:hover, &.active{
+					background: $brand-primary !important;
+					color: $white;
+					
+					svg,i{
+						fill: $white;
+						color: $white;
+					}
+				}
+				
+				svg{
+					max-width: 16px;
+					width: auto;
+					height: 16px;
+					margin-right: 10px;
+					fill: $gray-light;
+				}
+			}
+		}
+	}
+}
+
+
+.navbar-brand{
+	width: 180px !important;
+	background-size: 150px auto !important;
+}
+
+.badge{
+	border-radius: 14px;
+}
+
+.btn{
+	min-width: 125px;
+	cursor: pointer;
+}
+
+.input-group-addon{
+	min-width: 62px;
+	display: block;
+	background: $gray-shine;
+	text-align: left;
+	
+	label{
+		margin-left: 20px;
+	}
+}
+
+.form-check-input{
+	margin-left: 0;
+	margin-right: 5px;
+}
+
+.form-control:disabled{
+	background: $gray-shine;
+	
+	&::placeholder{
+		color: #607d8b;
+	}
+}
+
+.logo{
+	max-width: 200px;
+}
+ 
+[class*='col-']{
+	float: left;
+} 
+
+table, .table{ 
+	a:hover{
+		text-decoration: none;
+	}
+	
+	i{
+		font-size: 16px;
+		margin: 5px;
+	}
+	
+	tr{
+		&.disabled{
+		
+			td{
+				color: $gray-light;
+				text-decoration: line-through;
+				
+				&:last-child{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	thead{
+		tr{
+			th{
+				font-weight: 400;
+				color: $brand-primary;
+				padding: 5px 15px 5px 5px !important;
+				vertical-align: top;
+				
+				i.fa-filter{
+					color: $gray-lighter;
+					vertical-align: bottom;
+					
+					&.active{
+						color: $gray;
+					}
+					
+				}
+			}
+		}
+	}
+	tbody{
+		td{
+			padding: 5px 15px 5px 5px !important;
+		}
+	}
+}
+
+.footable-detail-row{
+	background: $white !important;
+	.footable-details{
+		border: 0;
+		margin: 0;
+		
+		tr{
+			background: $white !important;
+			border-bottom: 1px solid $gray-light;
+			
+			&:last-child{
+				border: 0;
+			}
+			
+			td,th{
+				border: 0;
+				padding: 0;
+			}
+			
+		}
+		
+	}
+	
+}
+
+
+.tab-content{
+	border:0;
+	
+	.tab-pane{
+		padding: 0;
+		
+		.nopadding{
+			padding-left: 0;
+		}
+	}
+}
+
+.nopadding{
+	padding-left: 0;
+}
+
+
+.form-group{
+	h4{
+		color: $brand-primary;
+		font-size: 22px;
+		font-weight: 300;
+	}
+}
+
+
+
+
+.nav-tabs {
+	.nav-item{
+		cursor: pointer;
+		
+		&.active{
+			background: $brand-primary;
+			color: $white;
+			
+			.nav-link{
+				color: $white;
+			}
+		}			
+		.nav-link{
+			border-color: $gray-lighter;
+			&.active{
+				background: $brand-primary;
+				color: $white;
+			}
+		}
+	}
+}
+
+.card{	
+	.card-header{ 	
+		background: transparent;
+		strong {
+			font-weight: 300;
+			font-size: 18px;
+			padding: 5px 0 0 0;
+			display: inline-block;
+			
+			i{
+				margin-right: 5px;
+			}
+		}
+		
+		.btn-primary{
+			background: #fff;
+			color: $brand-primary;
+			border-color: $brand-primary;
+		}
+	}
+	.card-footer{
+		background: transparent;
+	}
+	
+	[class*='col-']{
+		margin-bottom: 25px;
+	} 
+}
+
+.admin-block{
+	margin-top: 25px;
+}
+
+.line-hr{
+	margin: 5px 0 15px 0;
+	padding-bottom: 0px;
+}
+
+
+h1{
+	font-size: 14px;
+	font-weight: 600;
+	margin: 0;
+	text-transform: uppercase;
+	color: $brand-primary;
+}
+
+.remodal{
+	padding: 0 !important;
+	
+	.remodal-header{
+		margin-bottom: 0;
+		padding-bottom: 0;
+		
+		h1{
+			font-size: 14px;
+			font-weight: 600;
+			margin: 0;
+			text-transform: uppercase;
+			color: $brand-primary;
+		}
+	}
+	.remodal-content{
+		display: flex;
+		align-items: center;
+		padding: 0;
+		
+
+		i{
+				vertical-align: middle;
+				margin-right: 10px;
+		}
+		
+		.card-header{
+			margin-bottom: 10px;
+			font-weight: 400;
+		}
+		
+		.card-block{
+			max-height: 60vh;
+			overflow-y: auto;
+		}
+	}
+	
+	.remodal-footer{
+		padding: 0;
+		.card-block{
+			padding: 10px;
+		}
+	}
+	
+	h4{
+		font-size: 18px;
+		font-weight: 400;
+		color: $brand-primary;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+select.input-group-addon.form-control {
+    border: 1px solid #ccc;
+}
+
+.btn.pull-right {
+    margin-top: -6px;
+}
+
+.form-control-danger{
+	border-color: rgba(255,0,0,0.5);
+}
+
+.form-control-warning{
+	border-color: rgba(255,152,0,0.5);
+}
+
+form-control-success{
+	border-color: rgba(0,128,0,0.5);
+}
+
+label + .form-control-danger{
+	color: rgba(255,0,0,1);
+}
+
+label + .form-control-warning{
+	color: rgba(255,152,0,1);
+}
+
+label + .form-control-success{
+	color: rgba(0,128,0,1);
+}
+
+label.error{
+	color: red;
+	font-size: 12px;
+	float: right;
+}
+
+.dropdown{
+	a{
+		cursor: pointer;
+	}
+}
+
+ul.filter{
+	cursor: pointer;
+	width: 250px;
+	
+	.dropdown-item{
+		padding: 5px;
+		border-bottom: 1px solid $gray-lightest;
+		
+		&:last-child{
+			border-bottom: 0;
+		}
+	}
+	
+	a{
+		color: $gray-dark;
+	}
+	
+	.list-group-item{
+		padding: 5px;
+		
+		.form-check{
+			margin: 0;
+		}
+		
+		.form-check-label{
+			padding: 0 5px;
+		}
+		
+	}
+	
+}
+
+
+/***********************************/
+@media (min-width: 1200px){
+	.container{
+		width: 100%;
+	}
+}
+
+.table-pagination{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+	.pagination{
+		margin: 10px 0;
+		
+	}
+	
+	.result-summary{
+		font-size: 12px;
+		color: $gray-light;
+	}
+}
+
+.nav-tabs{
+	border-bottom: 0;
+}
+
+.grid-view{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+	
+	.card{
+		flex: 1 0 49%;
+		margin: 5px;
+		
+		
+		
+		&.card-lg{
+			flex: 1 0 99%;
+		}
+		
+		&.card-sm{
+			flex: 1 0 32.5%;
+		}
+		
+		h4{
+			font-size: 18px;
+			font-weight: 400;
+			word-break: break-all;
+		}
+		
+	}
+}
+
+.login-card{
+	max-width: 425px;
+}
+
+.breadcrumb{
+	.btn-secondary{
+		color: $gray-light;
+		border: 0;
+	}
+}
+
+.notification-menu{
+	width: 320px;
+	
+	li{
+		border-bottom: 1px solid $gray-lightest;
+		white-space: normal;
+		
+		&:last-child{
+			border: 0;
+			padding: 10px 0;
+			text-align: center;
+		}
+		
+		&:hover{
+			background: $gray-shine;
+			color: $gray;
+			
+		}
+		
+		a{
+			text-decoration: none;
+			color: $gray;
+		}
+	}
+}
+
+.fixed-addon{
+	width: 80px;
+}
+
+.empty-img{
+	width: 100px;
+	height: 100px;
+	margin: 15px 0;
+}
+
+.modal-content{
+	width: 700px;
+}

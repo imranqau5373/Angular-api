@@ -1,0 +1,25 @@
+{% import "templates/macros/globals.njk" as g %}
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+
+<head>
+    {% block meta %} {% endblock %}
+</head>
+
+<body class="app header-fixed sidebar-fixed">
+	{{ g.header() }}
+	<div class="app-body">
+	{% include "templates/partials/sidebar.njk" %}
+		<main class="main">
+			{% block content %} {% endblock %}
+		</main>
+	</div>
+    {#% include "templates/partials/footer.njk" %#}    
+    <script src='layout/js/vendor/jquery-3.2.1.min.js'></script>
+    <script src='layout/js/vendor/popper.min.js'></script>
+    <script src='layout/js/vendor/bootstrap.min.js'></script>
+    <script src="layout/js/vendor/app.js"></script>
+	<script src="layout/js/vendor/FooTable.js"></script>
+	<script src="layout/js/vendor/remodal.js"></script>
+</body>
+</html>

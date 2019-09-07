@@ -1,0 +1,130 @@
+<!-- admin-companies.njk -->
+{% extends "templates/layout.njk" %}
+
+
+{% block meta %}
+    {{ g.meta() }}
+{% endblock %}
+
+{% block content %}
+	
+	<!-- Breadcrumb -->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item active">Companies</li>
+    </ol>
+	
+	<div class="container-fluid">
+        <div class="animated fadeIn">
+                    <div class="row">						
+						<div class="col-sm-12">	
+							<!-- Shops Details -->							
+								<div class="card">	
+									<div class="card-header">
+										<strong>Companies</strong>
+										
+										<a href="admin-company-add.html" class="btn btn-primary float-right"><i class="icon-plus"></i> Add new company</a>
+										
+									</div>
+									<div class="card-block">
+									
+										<table class="table table-bordered table-striped "  data-toggle="table">
+											<thead>
+												<tr>
+													<th>
+														<div class="dropdown">
+															<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-filter"></i> CVR number</a>
+															{{ g.filter() }}	
+														</div>
+													</th>
+													<th>
+														<div class="dropdown">
+															<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-filter"></i> Company name</a>
+															{{ g.filter() }}	
+														</div>
+													</th>
+													<th data-breakpoints="xs sm md">
+														<div class="dropdown">
+															<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-filter"></i> Address</a>
+															{{ g.filter() }}	
+														</div>
+													</th>
+													<th data-breakpoints="xs sm">
+														<div class="dropdown">
+															<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-filter"></i> Shops <i class="fa fa-sort-desc"></i></a>
+															{{ g.filter(false) }}	
+														</div>
+													</th>
+													<th data-breakpoints="xs">
+														<div class="dropdown">
+															<a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-filter"></i> Chain</a>
+															{{ g.filter() }}	
+														</div>
+													</th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>26259495 </td>
+													<td>Kvickly</td>
+													<td>Roskildevej 65, 2620 Albertslund Municipality, Denmark</td>
+													<td>81</td>
+													<td>Coop amba</td>
+													<td class="text-center"><a href="admin-company-view.html"><i class="icon-eye" title="View details"></i></a></td>
+												</tr>	
+												<tr>
+													<td>862500952</td>
+													<td>SPAR International</td>
+													<td>Rokin 99-101,1012 KM Amsterdam,The Netherlands</td>
+													<td>120</td>
+													<td>Dagrofa</td>
+													<td class="text-center"><a href="admin-company-view.html"><i class="icon-eye" title="View details"></i></a></td>
+												</tr>
+												
+												<tr>
+													<td>35954716</td>
+													<td>Netto</td>
+													<td>Mimersvej 1, 4600, Køge</td>
+													<td>457</td>
+													<td>Dansk Supermarked A/S</td>
+													<td class="text-center"><a href="admin-company-view.html"><i class="icon-eye" title="View details"></i></a></td>
+												</tr>
+												
+												<tr>
+													<td>11517498</td>
+													<td>Fakta</td>
+													<td>Roskildevej 65,2620 Albertslund</td>
+													<td>420</td>
+													<td>Dansk Supermarked A/S</td>
+													<td class="text-center"><a href="admin-company-view.html"><i class="icon-eye" title="View details"></i></a></td>
+												</tr>
+												
+											</tbody>
+										</table>
+										<nav class="table-pagination">
+											<ul class="pagination">
+												<li class="page-item disabled"><a class="page-link" href="#">Prev</a>
+												</li>
+												<li class="page-item active">
+													<a class="page-link" href="#">1</a>
+												</li>
+												<li class="page-item disabled"><a class="page-link" href="#">Next</a>
+												</li>
+											</ul>
+											<div class="result-summary"><span id="current-start">1</span> to <span id="current-end">4</span> of <span id="total-result">4</span>results.</div>
+										</nav>
+									</div>
+									<!--  -->										
+								</div>
+							</div>
+							<!-- Shops Details ends -->
+							
+					<!--  -->
+                    </div>
+                </div>      
+	</div>
+    <!-- /.conainer -->
+    
+{% endblock %}
+<!-- end index.njk -->

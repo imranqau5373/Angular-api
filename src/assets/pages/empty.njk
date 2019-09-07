@@ -1,0 +1,46 @@
+<!-- admin-chains.njk -->
+{% extends "templates/layout.njk" %}
+
+
+{% block meta %}
+    {{ g.meta() }}
+{% endblock %}
+
+{% block content %}
+	
+	<!-- Breadcrumb -->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item active">[title]</li>
+    </ol>
+	
+	<div class="container-fluid">
+        <div class="animated fadeIn">
+                    <div class="row">						
+						<div class="col-sm-12">	
+							<!-- Shops Details -->							
+								<div class="card">	
+									<div class="card-header">
+										<strong>[Title]</strong>
+										<a href="" class="btn btn-primary float-right"><i class="icon-plus"></i> Add new [title]</a>
+									</div>
+									<div class="card-block">
+										<div class="text-center">
+											<img src="img/empty.svg" class="empty-img">
+											<p class="text-muted">Seems you haven't added anything yet, <a href="">add now!</a></p>
+											</div>
+										
+									</div>
+									<!--  -->										
+								</div>
+							</div>
+							<!-- Shops Details ends -->
+							
+					<!--  -->
+                    </div>
+                </div>      
+	</div>
+    <!-- /.conainer -->
+    
+{% endblock %}
+<!-- end index.njk -->
