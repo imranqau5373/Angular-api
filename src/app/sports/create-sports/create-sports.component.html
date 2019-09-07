@@ -1,0 +1,48 @@
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item">
+                  <a href="/sports">Sports</a>
+                </li>
+                <li class="breadcrumb-item active">Add new sports</li>
+              </ol>
+              <div class="container-fluid">
+                <div class="animated fadeIn">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="company" role="tabpanel">
+                          <div class="col-sm-12 nopadding">
+                            <div class="card">
+                              <div class="card-block col-md-6">
+                                <form [formGroup]="sportsFrom" id="wrapped">
+                                    <div class="form-group">
+                                    <label for="cvr">Sports Name</label>
+                                    <div class="input-group">
+                                        <input type="text"  formControlName="Sport_Name" id="Sport_Name" placeholder="Enter Sports Name" class="form-control" >                               
+                                    </div>
+                                    <!-- <small class="form-text text-muted text-danger">The CVR number is not correct. Please try again!</small> -->
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="chain-name">Sports Details</label>
+                                    <input type="text" class="form-control"  formControlName="Sport_Detail" id="Sport_Detail" placeholder="Enter Sports Details"  > 
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="chain-address">Sports Descriptions</label>
+                                    <input type="text" class="form-control"  formControlName="Sport_Description" id="Sport_Description" placeholder="Enter Sports Description" > 
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" (click)="submitForm()" class="btn btn-sm btn-primary float-right">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+    
+                      </div>
+                      <!-- Wizard tabs ends -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.conainer -->
