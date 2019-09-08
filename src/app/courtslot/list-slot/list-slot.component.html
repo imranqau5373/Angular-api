@@ -1,6 +1,6 @@
 <ol class="breadcrumb">
         <li class="breadcrumb-item">Home</li>
-        <li class="breadcrumb-item active">Courts</li>
+        <li class="breadcrumb-item active">Court Duration</li>
 </ol>
       <div class="container-fluid">
         <div class="animated fadeIn">
@@ -9,9 +9,7 @@
               <!-- Shops Details -->
               <div class="card">
                 <div class="card-header">
-                  <strong>Courts List</strong>
-                  <a href="/courts/create" class="btn btn-primary float-right">
-                    <i class="icon-plus"></i> Add new court</a>
+                  <strong>Courts Slots List</strong>
                 </div>
                 <div class="card-block">
                   <table class="table table-bordered table-striped " data-toggle="table">
@@ -22,33 +20,29 @@
                             </th>
                             <th>
                                     Court Name
+                          </th>
+                            <th>
+                                    Slot StartTime
                             </th>
                             <th data-breakpoints="xs">
-                                    Template Name
-                            </th>
-                            <th data-breakpoints="xs">
-                                Start Date
-                            </th>
-                            <th data-breakpoints="xs">
-                                End Date
+                                    Slot EndTime
                             </th>
                             <th data-breakpoints="xs sm">
                                     Sports Name
                             </th>
-                       
                             <th>Action</th>
                           </tr>
                         </thead>
                     <tbody>
-                        <tr *ngFor="let item of courtsList; let i = index">
+                        <tr *ngFor="let item of slotList; let i = index">
                             <td>{{i +1}}</td>
                         <td>{{item.CourtName}}</td>
-                        <td>{{item.TemplateName}}</td>
-                        <td>{{item.CourtStartDate}}</td>
-                        <td>{{item.CourtEndDate}}</td>
-                        <td>{{item.Sport_Name}}</td>
+                        
+                        <td>{{item.Slot_StartTime}}</td>
+                        <td>{{item.Slot_EndTime}}</td>
+                        <td>{{item.SportsName}}</td>
                         <td class="text-center">
-                          <a href="admin-chain-view.html">
+                          <a href="">
                             <i class="icon-eye" title="View details"></i>
                           </a>
                         </td>

@@ -23,7 +23,6 @@ sportsFrom : FormGroup;
   }
 
   submitForm() {
-    debugger;
     console.log(this.sportsFrom.value);
     let Sport = this.sportsFrom.value;
     this._httpService.post("/api/admin/AddSport", Sport).subscribe(result => {

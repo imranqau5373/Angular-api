@@ -16,12 +16,10 @@ export class ListSportsComponent implements OnInit {
   }
 
   getSportsList(){
-    debugger;
     this._httpService.get("/api/admin/getallsports").subscribe(result => {
       this.sportList = result;
     }, error => {
-      debugger;
-      console.log(error);
+      console.log(error); 
     });
   }
 

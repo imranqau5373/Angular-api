@@ -1,1 +1,77 @@
-<p>create-court works!</p>
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item">
+                  <a href="/sports">Sports</a>
+                </li>
+                <li class="breadcrumb-item active">Add new court</li>
+              </ol>
+              <div class="container-fluid">
+                <div class="animated fadeIn">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="company" role="tabpanel">
+                          <div class="col-sm-12 nopadding">
+                            <div class="card">
+                              <div class="card-block col-md-6">
+                                <form [formGroup]="courtFrom" id="wrapped">
+                                    <div class="form-group">
+                                        <label for="chain-address">Select Sports</label>
+                                        <!-- <input type="number" class="form-control"  formControlName="FK_SportsId" id="Select_Sports" placeholder="Select Sports" > 
+                                         -->
+                                         <select class="form-control" (change)="changeCity($event)" formControlName="Sport_ID_FK">
+                                            <option value="" disabled>Choose your sports</option>
+                                            <option *ngFor="let sports of sportList" [ngValue]="sports.Sport_ID">{{sports.Sport_Name}}</option>
+                                         </select>
+                                        </div>
+                                    <div class="form-group">
+                                    <label for="cvr">Court Name</label>
+                                    <div class="input-group">
+                                        <input type="text"  formControlName="CourtName" id="CourtName" placeholder="Enter Court Name" class="form-control" >                               
+                                    </div>
+                                    <!-- <small class="form-text text-muted text-danger">The CVR number is not correct. Please try again!</small> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvr">Template Name</label>
+                                        <div class="input-group">
+                                            <input type="text"  formControlName="TemplateName" id="TemplateName" placeholder="Enter Template Name" class="form-control" >                               
+                                        </div>
+                                        <!-- <small class="form-text text-muted text-danger">The CVR number is not correct. Please try again!</small> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chain-address">Court Start Date</label>
+                                        <input type="date" class="form-control"  formControlName="CourtStartDate" id="CourtStartDate" > 
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="chain-address">Court End Date</label>
+                                                <input type="date" class="form-control"  formControlName="CourtEndDate" id="CourtEndDate" > 
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="chain-address">Court Start Time</label>
+                                            <input type="time" class="form-control"  formControlName="Court_Start_Time" id="Court_Start_Time" > 
+                                            </div>
+                                            <div class="form-group">
+                                                    <label for="chain-address">Court End Time</label>
+                                                    <input type="time" class="form-control"  formControlName="Court_End_Time" id="Court_End_Time" > 
+                                            </div>
+                                    <div class="form-group">
+                                    <label for="chain-name">Court Time Slot</label>
+                                    <input type="number" class="form-control"  formControlName="TimeSlot" id="Court_Details" placeholder="Enter Court Details"  > 
+                                    </div>
+ 
+                                    <div class="card-footer">
+                                        <button type="submit" (click)="submitForm()" class="btn btn-sm btn-primary float-right">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+    
+                      </div>
+                      <!-- Wizard tabs ends -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.conainer -->

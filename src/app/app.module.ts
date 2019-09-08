@@ -11,6 +11,9 @@ import { CreateCourtComponent } from './sportscourt/create-court/create-court.co
 import { ListCourtComponent } from './sportscourt/list-court/list-court.component';
 import { ListSportsComponent } from './sports/list-sports/list-sports.component';
 import { CreateSportsComponent } from './sports/create-sports/create-sports.component';
+import { CreateDurationComponent } from './courtduration/create-duration/create-duration.component';
+import { ListDurationComponent } from './courtduration/list-duration/list-duration.component';
+import { ListSlotComponent } from './courtslot/list-slot/list-slot.component';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { CreateSportsComponent } from './sports/create-sports/create-sports.comp
     CreateCourtComponent,
     ListCourtComponent,
     ListSportsComponent,
-    CreateSportsComponent
+    CreateSportsComponent,
+    CreateDurationComponent,
+    ListDurationComponent,
+    ListSlotComponent
   ],
   imports: [
     BrowserModule,

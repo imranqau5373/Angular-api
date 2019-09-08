@@ -4,13 +4,18 @@ import { ListCourtComponent } from './sportscourt/list-court/list-court.componen
 import { CreateCourtComponent } from './sportscourt/create-court/create-court.component';
 import { ListSportsComponent } from './sports/list-sports/list-sports.component';
 import { CreateSportsComponent } from './sports/create-sports/create-sports.component';
+import { ListSlotComponent } from './courtslot/list-slot/list-slot.component';
+//import { CreateDurationComponent } from './courtduration/create-duration/create-duration.component';
+
 
 
 
 
 const routes: Routes = [
-  { path: 'court', children: [{ path: '', component: ListCourtComponent },{ path: 'create', component: CreateCourtComponent },]},
+  { path: 'courts', children: [{ path: '', component: ListCourtComponent },{ path: 'create', component: CreateCourtComponent },]},
   { path: 'sports', children: [{ path: '', component: ListSportsComponent },{ path: 'create', component: CreateSportsComponent },]},
+   { path: 'slots', children: [{ path: '', component: ListSlotComponent }]}
+  
   
 ];
 
