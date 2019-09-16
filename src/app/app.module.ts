@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { HttpApiService } from './shared/service/http-api.service';
 
@@ -14,6 +14,8 @@ import { CreateSportsComponent } from './sports/create-sports/create-sports.comp
 import { CreateDurationComponent } from './courtduration/create-duration/create-duration.component';
 import { ListDurationComponent } from './courtduration/list-duration/list-duration.component';
 import { ListSlotComponent } from './courtslot/list-slot/list-slot.component';
+import { SignUpComponent } from './login/sign-up/sign-up.component';
+import { SignInComponent } from './login/sign-in/sign-in.component';
 
 
 @NgModule({
@@ -25,13 +27,16 @@ import { ListSlotComponent } from './courtslot/list-slot/list-slot.component';
     CreateSportsComponent,
     CreateDurationComponent,
     ListDurationComponent,
-    ListSlotComponent
+    ListSlotComponent,
+    SignUpComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
 
   ],
   providers: [HttpApiService],

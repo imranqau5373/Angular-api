@@ -1,0 +1,48 @@
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">Home</li>
+            <li class="breadcrumb-item">
+              <a href="/sports">Sports</a> 
+            </li>
+            <li class="breadcrumb-item active">Add new sports</li>
+          </ol>
+          <div class="container-fluid col-md-6">
+            <div class="animated fadeIn">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="company" role="tabpanel">
+                      <div class="col-sm-12 nopadding">
+                        <div class="card">
+                          <div class="card-block col-md-12">
+                            <form  id="wrapped">
+                                <div class="form-group">
+                                <label for="cvr">Email</label>
+                                <div class="input-group">
+                                     <input type="text"  [(ngModel)]="signUp.email" name="email"  placeholder="Enter Email Address" class="form-control" [ngModelOptions]="{standalone: true}" >                               
+                                </div>
+                                <!-- <small class="form-text text-muted text-danger">The CVR number is not correct. Please try again!</small> -->
+                                </div>
+                                <div class="form-group">
+                                <label for="chain-name">Password</label>
+                                <input type="password" class="form-control"   [(ngModel)]="signUp.password" name="password" placeholder="Enter Password" [ngModelOptions]="{standalone: true}" > 
+                                </div>
+                                <div class="form-group">
+                                <label for="chain-address">Confirm Password</label>
+                                <input type="password" class="form-control"   [(ngModel)]="signUp.confirmPassword" name="confirm-password" placeholder="Enter Confirm Password"[ngModelOptions]="{standalone: true}" > 
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" (click)="submitForm()" class="btn btn-sm btn-primary float-right">Sign Up</button>
+                                </div>
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- Wizard tabs ends -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.conainer -->

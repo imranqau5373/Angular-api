@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable ,  throwError } from 'rxjs';
+//import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { Router } from '@angular/router';
 
 import { catchError } from 'rxjs/operators';
 
@@ -11,7 +13,7 @@ export class HttpApiService {
     urlPath: string = environment.production ? 'https://service.traffilizer.com' : 'http://localhost:49696';
   
   constructor(
-    private http: HttpClient
+    private http: HttpClient, private router: Router
   ) {}
 
   private formatErrors(error: any) {
@@ -30,6 +32,14 @@ export class HttpApiService {
     ).pipe(catchError(this.formatErrors));
   }
 
+  // anonymousPost(url: string, data: any): Observable<any> {
+  //   let headers = new Headers({ 'Content-Type': 'application/json' });
+  //   let options = new RequestOptions({ headers: headers });
+  //   return this._http.post(this.urlPath + url, data, options)
+  //     .map(this.HandleMapObservable)
+  //     .catch((error: Response) => this.handleErrorObservable(error, this.router));
+  // }
+
   post(path: string, body: Object = {}): Observable<any> {
     let headers = new Headers({
         'Content-Type': 'application/json;charset=utf-8',
@@ -45,5 +55,20 @@ export class HttpApiService {
     return this.http.delete(
       `${this.urlPath}${path}`
     ).pipe(catchError(this.formatErrors));
+  }
+
+  //by farrukh to add
+  private HandleMapObservable(response: Response | any) {
+    if (response.text()) {
+      return response.json();
+    }
+  }
+
+  private handleErrorObservable(error: Response | any, router: Router) {
+    if (error.statusText == 'Unauthorized') {
+      router.navigate(["/signin"]);
+    }
+    console.error(error.message || error);
+    return Observable.throw(error.message || error);
   }
 }
