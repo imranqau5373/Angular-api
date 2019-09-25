@@ -1,3 +1,10 @@
+
+<style>
+    .my-pagination /deep/ .ngx-pagination .current {
+      background: red;
+    }
+  </style>
+
 <ol class="breadcrumb">
         <li class="breadcrumb-item">Home</li>
         <li class="breadcrumb-item active">Court Duration</li>
@@ -10,31 +17,38 @@
               <div class="card">
                 <div class="card-header">
                   <strong>Courts Slots List</strong>
+                   
+                    <div class="form-group input-group float-right text-input-wrapper" style="width:20%;">
+                        <input class="form-control search-field ng-pristine ng-untouched ng-valid ng-empty" type="text" name="search" [(ngModel)]="filter"  placeholder="Search Slot"> 
+                    </div>     
+
                 </div>
+
                 <div class="card-block">
                   <table class="table table-bordered table-striped " data-toggle="table">
                       <thead>
                           <tr>
-                            <th>
+                            <th >
                                     Number
                             </th>
-                            <th>
+                            <th (click)="sort('CourtName')">
                                     Court Name
+                                    <span class="glyphicon sort-icon" *ngIf="key =='CourtName'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
                           </th>
-                            <th>
+                            <th (click)="sort('Slot_StartTime')">
                                     Slot StartTime
                             </th>
-                            <th data-breakpoints="xs">
+                            <th data-breakpoints="xs" (click)="sort('Slot_EndTime')">
                                     Slot EndTime
                             </th>
-                            <th data-breakpoints="xs sm">
+                            <th data-breakpoints="xs sm" (click)="sort('SportsName')">
                                     Sports Name
                             </th>
                             <th>Action</th>
                           </tr>
                         </thead>
                     <tbody>
-                        <tr *ngFor="let item of slotList; let i = index">
+                        <tr *ngFor="let item of slotList | orderBy: key : reverse | filter:filter | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">
                             <td>{{i +1}}</td>
                         <td>{{item.CourtName}}</td>
                         
@@ -48,10 +62,12 @@
                         </td>
                       </tr>
                     </tbody>
+
                   </table>
                   <nav class="table-pagination">
                     <ul class="pagination">
-                      <li class="page-item disabled">
+                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                      <!-- <li class="page-item disabled">
                         <a class="page-link" href="#">Prev</a>
                       </li>
                       <li class="page-item active">
@@ -59,7 +75,7 @@
                       </li>
                       <li class="page-item disabled">
                         <a class="page-link" href="#">Next</a>
-                      </li>
+                      </li> -->
                     </ul>
                     <div class="result-summary">
                       <span id="current-start">1</span> to

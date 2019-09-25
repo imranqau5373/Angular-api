@@ -15,15 +15,15 @@
                           <div class="col-sm-12 nopadding">
                             <div class="card">
                               <div class="card-block col-md-6">
-                                <form [formGroup]="sportsFrom" id="wrapped">
+                                <form id="wrapped">
                                     <div class="form-group">
                                     <label for="cvr">Select Sports</label>
                                     <div class="input-group">
                                         <input type="text"  formControlName="Sport_Name" id="Sport_Name" placeholder="Enter Sports Name" class="form-control" >  
-                                        <select class="form-control" (change)="changeCity($event)" formControlName="SportsId">
+                                        <!-- <select class="form-control" formControlName="SportsId">
                                                 <option value="" disabled>Choose your sports</option>
                                                 <option *ngFor="let sports of sportList" [ngValue]="sports.Sport_ID">{{sports.Sport_Name}}</option>
-                                             </select>                             
+                                             </select>                              -->
                                     </div>
                                     <!-- <small class="form-text text-muted text-danger">The CVR number is not correct. Please try again!</small> -->
                                     </div>

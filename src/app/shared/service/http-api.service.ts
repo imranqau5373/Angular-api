@@ -10,7 +10,7 @@ import { catchError } from 'rxjs/operators';
 @Injectable()
 export class HttpApiService {
 
-    urlPath: string = environment.production ? 'https://service.traffilizer.com' : 'http://localhost:49696';
+    urlPath: string = environment.production ? 'http://api.easybookings.club' : 'http://localhost:49696';
   
   constructor(
     private http: HttpClient, private router: Router

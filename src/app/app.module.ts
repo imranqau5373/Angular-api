@@ -16,6 +16,9 @@ import { ListDurationComponent } from './courtduration/list-duration/list-durati
 import { ListSlotComponent } from './courtslot/list-slot/list-slot.component';
 import { SignUpComponent } from './login/sign-up/sign-up.component';
 import { SignInComponent } from './login/sign-in/sign-in.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Ng2OrderModule } from 'ng2-order-pipe'; //importing the module
+import {NgxPaginationModule} from 'ngx-pagination';
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { SignInComponent } from './login/sign-in/sign-in.component';
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule,
+    Ng2OrderModule,
+    NgxPaginationModule
 
   ],
   providers: [HttpApiService],

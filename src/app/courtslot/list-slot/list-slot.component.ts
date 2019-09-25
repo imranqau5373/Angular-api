@@ -11,8 +11,17 @@ export class ListSlotComponent implements OnInit {
   constructor(private _httpService:HttpApiService) { }
   slotList: any = [];
 
+    //sorting
+    key: string = 'CourtName'; //set default
+    reverse: boolean = false;
+    sort(key){
+      this.key = key;
+      this.reverse = !this.reverse;
+    }
+    p: number = 1;
+
   ngOnInit() {
-this.getCourtSlots();
+    this.getCourtSlots();
   }
 
   getCourtSlots(){
