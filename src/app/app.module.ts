@@ -19,6 +19,8 @@ import { SignInComponent } from './login/sign-in/sign-in.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe'; //importing the module
 import {NgxPaginationModule} from 'ngx-pagination';
+import { ListBookingComponent } from './courtbooking/list-booking/list-booking.component';
+import { CreateBookingComponent } from './courtbooking/create-booking/create-booking.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import {NgxPaginationModule} from 'ngx-pagination';
     ListDurationComponent,
     ListSlotComponent,
     SignUpComponent,
-    SignInComponent
+    SignInComponent,
+    ListBookingComponent,
+    CreateBookingComponent
   ],
   imports: [
     BrowserModule,
