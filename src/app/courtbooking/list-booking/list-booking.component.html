@@ -1,7 +1,7 @@
 
 <ol class="breadcrumb">
     <li class="breadcrumb-item">Home</li>
-    <li class="breadcrumb-item active">Sports</li>
+    <li class="breadcrumb-item active">Booking</li>
   </ol>
   <div class="container-fluid">
     <div class="animated fadeIn">
@@ -10,9 +10,9 @@
           <!-- Shops Details -->
           <div class="card">
             <div class="card-header">
-              <strong>Sports</strong>
-              <a href="/sports/create" class="btn btn-primary float-right">
-                <i class="icon-plus"></i> Add new sports</a>
+              <strong>Court Booking</strong>
+              <a href="/booking/create" class="btn btn-primary float-right">
+                <i class="icon-plus"></i> Add new Booking</a>
             </div>
             <div class="card-block">
               <table class="table table-bordered table-striped " data-toggle="table">
@@ -22,14 +22,18 @@
                             Number
                     </th>
                     <th>
-                            Sports Name
+                            Booking User
                     </th>
                     <th data-breakpoints="xs">
-                            Sports Details
+                            Court Name
                     </th>
                     <th data-breakpoints="xs sm">
-                      Courts
+                      Sports Name
                     </th>
+                    <th>
+                      Status
+                    </th>
+                    
                
                     <th>Action</th>
                   </tr>
@@ -40,6 +44,9 @@
                     <td>{{item.Sport_Name}}</td>
                     <td>{{item.Sport_Details}}</td>
                     <td>{{item.CourtCount}}</td>
+                    <td>{{item.CourtCount}}</td>
+                    
+
                     <td class="text-center">
                       <a href="">
                         <i class="icon-eye" title="View details"></i>
