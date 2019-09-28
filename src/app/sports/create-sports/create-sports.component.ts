@@ -25,8 +25,13 @@ sportsFrom : FormGroup;
   submitForm() {
     let Sport = this.sportsFrom.value;
     this._httpService.post("/api/admin/AddSport", Sport).subscribe(result => {
-      console.log(result);
-      location.href = document.getElementsByTagName('base')[0].href + 'sports';
+      if(result.success){
+        location.href = document.getElementsByTagName('base')[0].href + 'sports';
+      }
+      else{
+        alert(result.message);
+      }
+
     }, error => {
       console.log(error);
     });

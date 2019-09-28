@@ -10,7 +10,14 @@ import { HttpApiService } from '../../shared/service/http-api.service';
 export class ListSportsComponent implements OnInit {
   sportList: any = [];
   constructor(private _httpService: HttpApiService) { }
-
+    //sorting
+    key: string = 'Sport_Name'; //set default
+    reverse: boolean = false;
+    sort(key){
+      this.key = key;
+      this.reverse = !this.reverse;
+    }
+    p: number = 1;
   ngOnInit() {
     this.getSportsList();
   }

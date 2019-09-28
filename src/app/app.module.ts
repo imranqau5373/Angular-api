@@ -23,6 +23,8 @@ import { ListBookingComponent } from './courtbooking/list-booking/list-booking.c
 import { CreateBookingComponent } from './courtbooking/create-booking/create-booking.component';
 import { ViewSportsComponent } from './sports/view-sports/view-sports.component';
 import { EditSportsComponent } from './sports/edit-sports/edit-sports.component';
+import { EditCourtComponent } from './sportscourt/edit-court/edit-court.component';
+import { ViewCourtComponent } from './sportscourt/view-court/view-court.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { EditSportsComponent } from './sports/edit-sports/edit-sports.component'
     ListBookingComponent,
     CreateBookingComponent,
     ViewSportsComponent,
-    EditSportsComponent
+    EditSportsComponent,
+    EditCourtComponent,
+    ViewCourtComponent
   ],
   imports: [
     BrowserModule,
