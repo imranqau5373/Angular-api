@@ -21,6 +21,8 @@ import { Ng2OrderModule } from 'ng2-order-pipe'; //importing the module
 import {NgxPaginationModule} from 'ngx-pagination';
 import { ListBookingComponent } from './courtbooking/list-booking/list-booking.component';
 import { CreateBookingComponent } from './courtbooking/create-booking/create-booking.component';
+import { ViewSportsComponent } from './sports/view-sports/view-sports.component';
+import { EditSportsComponent } from './sports/edit-sports/edit-sports.component';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { CreateBookingComponent } from './courtbooking/create-booking/create-boo
     SignUpComponent,
     SignInComponent,
     ListBookingComponent,
-    CreateBookingComponent
+    CreateBookingComponent,
+    ViewSportsComponent,
+    EditSportsComponent
   ],
   imports: [
     BrowserModule,

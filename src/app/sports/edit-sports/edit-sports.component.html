@@ -1,0 +1,50 @@
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">Home</li>
+    <li class="breadcrumb-item">
+        <a href="/sports">Sports</a>
+    </li>
+    <li class="breadcrumb-item active">Edit Sports</li>
+</ol>
+<div class="container">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- Wizard tabs start -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="company" role="tabpanel">
+                        <!-- Company Setup Tab -->
+                        <form name="companyform" [formGroup]="sportsFrom">
+                            <div class="col-sm-12 nopadding">
+                                <div class="card">
+                                    <div class="card-block col-sm-6">
+                                        
+                                        <div class="form-group">
+                                            <label for="company-name">Sports Name</label>
+                                            <input type="text" class="form-control" formControlName="Sport_Name" placeholder="Enter sports name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="company-name">Sports Details</label>
+                                            <input type="text" class="form-control" formControlName="Sport_Detail" placeholder="Enter sports details">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="company-name">Sports Description</label>
+                                            <input type="text" class="form-control" formControlName="Sport_Description" placeholder="Enter sports description">
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" (click)="editSports()" class="btn btn-sm btn-primary float-right">Update</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- Company Setup Tab ends -->
+                    </div>
+             
+                </div>
+                <!-- Wizard tabs ends -->
+            </div>
+        </div>
+    </div>
+</div>
+
