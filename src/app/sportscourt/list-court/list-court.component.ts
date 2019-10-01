@@ -9,7 +9,13 @@ import { HttpApiService } from '../../shared/service/http-api.service';
 export class ListCourtComponent implements OnInit {
   courtsList: any = [];
   constructor(private _httpService:HttpApiService) { }
-
+  key: string = 'CourtName'; //set default
+  reverse: boolean = false;
+  sort(key){
+    this.key = key;
+    this.reverse = !this.reverse;
+  }
+  p: number = 1;
   ngOnInit() {
   this.getCourtsList()
 

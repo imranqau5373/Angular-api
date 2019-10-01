@@ -24,8 +24,8 @@ import { CreateBookingComponent } from './courtbooking/create-booking/create-boo
 
 
 const routes: Routes = [
-  { path: 'courts', children: [{ path: '', component: ListCourtComponent },{ path: 'create', component: CreateCourtComponent },{ path: 'view/:id', component: ViewSportsComponent },{path:'edit/:id',component:EditSportsComponent}]},
-  { path: 'sports', children: [{ path: '', component: ListSportsComponent },{ path: 'create', component: CreateSportsComponent },{ path: 'view/:id', component: ViewCourtComponent },{path:'edit/:id',component:EditCourtComponent}]},
+  { path: 'courts', children: [{ path: '', component: ListCourtComponent },{ path: 'create', component: CreateCourtComponent },{ path: 'view/:id', component: ViewCourtComponent },{path:'edit/:id',component:EditCourtComponent}]},
+  { path: 'sports', children: [{ path: '', component: ListSportsComponent },{ path: 'create', component: CreateSportsComponent },{ path: 'view/:id', component: ViewSportsComponent },{path:'edit/:id',component:EditSportsComponent}]},
   { path: 'booking', children: [{ path: '', component: ListBookingComponent },{ path: 'create', component: CreateBookingComponent },]},
    { path: 'slots', children: [{ path: '', component: ListSlotComponent }]},
    { path: 'signup', children: [{ path: '', component: SignUpComponent }]},
